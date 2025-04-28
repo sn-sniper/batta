@@ -1,25 +1,93 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>PolyGenius-Contact&Support</title>
-            <link href="./css/contact.css" rel="stylesheet" type="text/css" />
-            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-       </head> 
-       <body>
-        <div class="head-container">
-            <header class="topnav">
-                <img src="logo.png" alt="logo">
-                <div class="links">
-                    <a href="index.html" class="link">Home</a>
-                    <a href="calculator.html" class="link">Start Calculating</a>
-                    <a href="#" class="link">Contact Us</a>
-                </div>
-            </header>
-            <h1 style="text-align: center;color: #002d58;">PolyGenius</h1>
-            <h3 style="text-align: center;">Contact and Support</h3>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolyGenius - Contact</title>
+    <link href="./css/contact.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <div class="head-container">
+      <nav class="topnav">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="logo" class="logo-img" />
+          <p>PolyGenius</p>
         </div>
-        
-       </body>
+        <div class="links">
+          <a href="/" class="link">Home</a>
+          <a href="calculator.html" class="link">Start Calculating</a>
+          <a href="contact.html" class="link">Contact Us</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h1>Get in Touch</h1>
+        <p>Have questions about PolyGenius? We're here to help!</p>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span>polygenius.dev@gmail.com</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-clock"></i>
+          <span>Response time: Within 24 hours</span>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Your email">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="general">General Inquiry</option>
+            <option value="bug">Bug Report</option>
+            <option value="feature">Feature Request</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Your message"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+    <div class="footer">
+      <h2>Contact Us</h2>
+      <p>
+        We'd love to hear from you . Whether it's a bug, feature request, or you
+        just want to talk about triangles-we're all ears!!
+      </p>
+      <a href="contact.html">We're listenning</a>
+      <p>
+        📬 <strong>Email:</strong>
+        <a href="mailto:polygenius.dev@gamil.com">polygenius.dev@gmail.com</a>
+      </p>
+      <div class="icons">
+        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+      <p>
+        © 2025 <strong>PolyGenius</strong>. All copyrights reserved. <br />
+        <i>"Designed for precision. Built for minds that measure!"</i>
+      </p>
+    </div>
+  </body>
 </html>

@@ -1,98 +1,117 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>PolyGenius-Calculator</title>
-            <link href="./css/calc.css" rel="stylesheet" type="text/css" />
-            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-            <script src="./js/calcScript.js"></script>
-       </head>
-       <body>
-        <div class="head-container">
-            <header class="topnav">
-                <img src="logo.png" alt="logo">
-                <div class="links">
-                    <a href="index.html" class="link">Home</a>
-                    <a href="#" class="link">Start Calculating</a>
-                    <a href="contact.html" class="link">Contact Us</a>
-                </div>
-            </header>
-            <h1 style="text-align: center;color: #002d58;">PolyGenius</h1>
-            <h3 style="text-align: center;">Geometric Calculator</h3>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolyGenius - Calculator</title>
+    <link href="./css/calc.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+    <script src="./js/calcScript.js"></script>
+  </head>
+  <body>
+    <div class="head-container">
+      <nav class="topnav">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="logo" class="logo-img" />
+          <p>PolyGenius</p>
         </div>
-        <p>Select a shape from the list below to start your calculation then insert your measurments and enjoy accurate results!!</p>
+        <div class="links">
+          <a href="/" class="link">Home</a>
+          <a href="calculator.html" class="link">Start Calculating</a>
+          <a href="contact.html" class="link">Contact Us</a>
+        </div>
+      </nav>
+      <!-- <div>
+        <h1 class="title">PolyGenius</h1>
+        <h4 class="subtitle">
+          <i>"Smart tools for sharp minds"</i>
+        </h4>
+      </div> -->
+    </div>
+    <div class="select-container">
+      <p class="intro-text">
+        Select a shape from the list below to start your calculation then insert
+        your measurements and enjoy accurate results!
+      </p>
+      <div class="select-wrapper">
         <label for="shape">Select a shape:</label>
         <select id="shape" onchange="showShape()">
-            <option value="">--Select--</option>
-            <option value="square">Square</option>
-            <option value="rectangle">Rectangle</option>
-            <option value="triangle">Triangle</option>
-            <option value="circle">Circle</option>
-            <option value="cube">Cube</option>
+          <option value="">--Select--</option>
+          <option value="square">Square</option>
+          <option value="rectangle">Rectangle</option>
+          <option value="triangle">Triangle</option>
+          <option value="circle">Circle</option>
+          <option value="cube">Cube</option>
         </select>
+      </div>
+    </div>
 
-        <div id="squareSection" class="shape-section" style="display:none;">
-            <h2>Square</h2>
-            <img src="square.png" alt="square diagram">
-            <label>Side measurment: <input type="number" id="squareSide"></label>
-            <button onclick="calculateSquare()">Calculate</button>
-            <div id="squareResult"></div>
-        </div>
+    <div id="squareSection" class="shape-section" style="display: none">
+      <h2>Square</h2>
+      <img src="square.png" alt="square diagram" />
+      <label>Side measurment: <input type="number" id="squareSide" /></label>
+      <button onclick="calculateSquare()">Solve</button>
+      <div id="squareResult"></div>
+    </div>
 
-        <div id="rectangleSection" class="shape-section" style="display:none;">
-            <h2>Rectangle</h2>
-            <img src="rectangle.png" alt="rectangle diagram">
-            <label>Length: <input type="number" id="rectLength"></label>
-            <label>Width: <input type="number" id="rectWidth"></label>
-            <button onclick="calculateRectangle()">Calculate</button>
-            <div id="rectangleResult"></div>
-          </div>
+    <div id="rectangleSection" class="shape-section" style="display: none">
+      <h2>Rectangle</h2>
+      <img src="rectangle.png" alt="rectangle diagram" />
+      <label>Length: <input type="number" id="rectLength" /></label>
+      <label>Width: <input type="number" id="rectWidth" /></label>
+      <button onclick="calculateRectangle()">Calculate</button>
+      <div id="rectangleResult"></div>
+    </div>
 
-          <div id="triangleSection" class="shape-section" style="display:none;">
-            <h2>Triangle</h2>
-            <img src="./assets/triangle.png" alt="triangle diagram">
-            <label>Base: <input type="number" id="triBase"></label>
-            <label>Height: <input type="number" id="triHeight"></label>
-            <label>Side A: <input type="number" id="triA"></label>
-            <label>Side B: <input type="number" id="triB"></label>
-            <label>Side C: <input type="number" id="triC"></label>
-            <button onclick="calculateTriangle()">Calculate</button>
-            <div id="triangleResult"></div>
-          </div>
+    <div id="triangleSection" class="shape-section" style="display: none">
+      <h2>Triangle</h2>
+      <img src="./assets/triangle.png" alt="triangle diagram" />
+      <label>Base: <input type="number" id="triBase" /></label>
+      <label>Height: <input type="number" id="triHeight" /></label>
+      <label>Side A: <input type="number" id="triA" /></label>
+      <label>Side B: <input type="number" id="triB" /></label>
+      <label>Side C: <input type="number" id="triC" /></label>
+      <button onclick="calculateTriangle()">Calculate</button>
+      <div id="triangleResult"></div>
+    </div>
 
-          <div id="circleSection" class="shape-section" style="display:none;">
-            <h2>Circle</h2>
-            <img src="./assets/circle.png" alt="circle diagram">
-            <label>Radius: <input type="number" id="circleRadius"></label>
-            <button onclick="calculateCircle()">Calculate</button>
-            <div id="circleResult"></div>
-          </div>
+    <div id="circleSection" class="shape-section" style="display: none">
+      <h2>Circle</h2>
+      <img src="./assets/circle.png" alt="circle diagram" />
+      <label>Radius: <input type="number" id="circleRadius" /></label>
+      <button onclick="calculateCircle()">Calculate</button>
+      <div id="circleResult"></div>
+    </div>
 
-          <div id="cubeSection" class="shape-section" style="display:none;">
-            <h2>Cube</h2>
-            <img src="./assets/cube.png" alt="cube diagram">
-            <label>Side measurment: <input type="number" id="cubeSide"></label>
-            <button onclick="calculateCube()">Calculate</button>
-            <div id="cubeResult"></div>
-          </div>
+    <div id="cubeSection" class="shape-section" style="display: none">
+      <h2>Cube</h2>
+      <img src="./assets/cube.png" alt="cube diagram" />
+      <label>Side measurment: <input type="number" id="cubeSide" /></label>
+      <button onclick="calculateCube()">Calculate</button>
+      <div id="cubeResult"></div>
+    </div>
 
-          <div class="footer">
-            <h2>Contact Us</h2>
-            <p>We'd love to hear from you . Whether it's a bug, feature request, or you just want to talk about triangles-we're all ears!!</p>
-            <a href="contact.html">We're listenning</a>
-            <p>
-                📬 <strong>Email:</strong>
-                <a href="mailto:polygenius.dev@gamil.com">polygenius.dev@gmail.com</a>
-            </p>
-            <div class="icons">
-                <a href="https://twitter.com/" target="_blank" >🐦 Twitter</a>
-                <a href="https://linkedin.com/" target="_blank" >💼 LinkedIn</a>
-                <a href="https://github.com/" target="_blank" >💻 GitHub</a>
-            </div>
-            <p>© 2025 <strong>PolyGenius</strong>. All copyrights reserved. <br>
-                <i>"Designed for precision. Built for minds that measure!"</i>
-            </p>
-        </div>
-       </body>
+    <div class="footer">
+      <h2>Contact Us</h2>
+      <p>
+        We'd love to hear from you . Whether it's a bug, feature request, or you
+        just want to talk about triangles-we're all ears!!
+      </p>
+      <a href="contact.html">We're listenning</a>
+      <p>
+        📬 <strong>Email:</strong>
+        <a href="mailto:polygenius.dev@gamil.com">polygenius.dev@gmail.com</a>
+      </p>
+      <div class="icons">
+        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+      <p>
+        © 2025 <strong>PolyGenius</strong>. All copyrights reserved. <br />
+        <i>"Designed for precision. Built for minds that measure!"</i>
+      </p>
+    </div>
+  </body>
 </html>

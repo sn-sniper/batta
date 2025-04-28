@@ -69,18 +69,45 @@ body {
 
 .body-content {
     max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 2rem;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .body-content h3 {
     color: #002d58;
-    margin: 2rem 0 1rem;
-    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.body-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    border-radius: 2px;
 }
 
 .body-content p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.body-content b {
+    color: #002d58;
+}
+
+.body-content i {
+    color: #4CAF50;
 }
 
 .footer {
@@ -95,7 +122,7 @@ body {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     background: linear-gradient(90deg, #4CAF50, #45a049);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
