@@ -46,3 +46,61 @@ body {
 .link:hover {
     color: #4CAF50;
 }
+
+.footer {
+    background: linear-gradient(135deg, #002d58, #004d8f);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+.footer h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.footer p {
+    max-width: 700px;
+    margin: 1.5rem auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 30px;
+    display: inline-block;
+    margin: 1rem 0.5rem;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.footer a:hover {
+    background: #4CAF50;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76,175,80,0.3);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;
+}
+
+.icons a {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
