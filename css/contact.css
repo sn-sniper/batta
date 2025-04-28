@@ -59,7 +59,7 @@ body {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     background: linear-gradient(90deg, #4CAF50, #45a049);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
