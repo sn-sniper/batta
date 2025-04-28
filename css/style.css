@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo-img{
+        width: 40px;
+    }
+
+    .links{
+        display: flex;
+        gap: 1rem;
+        
+        .link{
+            text-decoration: none;
+            color: #000;
+        }
+        .link:hover{
+            color: #007BFF;
+            text-decoration: underline;
+        }
+    }
+}
